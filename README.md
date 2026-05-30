@@ -17,7 +17,7 @@ A Hybrid Mobile Application built for the Final Project using React Native and F
 * **State Management:** React Context API
 
 ###  How to Run
-1. Clone this repo: `git clone https://github.com/DarkkCode/SpendWise.git`
-2. Run `npm install`
-3. Run `npx expo prebuild`
-4. Run `npx expo run:android`
+1. **Clone this repo:** `git clone https://github.com/DarkkCode/SpendWise.git`
+2. **Run** `npm install`
+3. **Run** `npx expo prebuild`
+4. **Run** `npx expo run:android`

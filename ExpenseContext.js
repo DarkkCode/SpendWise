@@ -28,14 +28,14 @@ export const ExpenseProvider = ({ children }) => {
       return;
     }
 
-    // 1. Fetch Expenses for this specific user
+    // Fetches Expenses for the specific user
     const q = query(collection(db, "expenses"), where("userId", "==", user.uid));
     const unsubscribeData = onSnapshot(q, (snapshot) => {
       const expenseData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setExpenses(expenseData);
     });
 
-    // 2. Fetch User-Specific Settings (Budget)
+    // Fetches User-Specific Settings (Budget)
     const fetchUserSettings = async () => {
       const userDoc = await getDoc(doc(db, "users", user.uid));
       if (userDoc.exists()) {
@@ -47,7 +47,7 @@ export const ExpenseProvider = ({ children }) => {
     return () => unsubscribeData();
   }, [user]);
 
-  // Function to update budget in the cloud
+  // Update budget function
   const updateBudget = async (newBudget) => {
     if (!user) return;
     setMonthlyBudget(newBudget);

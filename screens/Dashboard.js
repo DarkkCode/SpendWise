@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native
 import { ExpenseContext } from '../ExpenseContext'; // Connects to Context
 
 const Dashboard = ({ navigation }) => {
-  // Pull data and budget from our Context "Brain"
   const { expenses, monthlyBudget } = useContext(ExpenseContext);
 
   // Calculates total spending dynamically
@@ -14,7 +13,6 @@ const Dashboard = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* Monthly Summary Card */}
       <View style={styles.card}>
         <Text style={styles.cardLabel}>Total Spent: Rs. {totalSpent}</Text>
         <Text style={styles.cardAmount}>Budget: Rs. {monthlyBudget}</Text>

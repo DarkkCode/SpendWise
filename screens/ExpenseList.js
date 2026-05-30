@@ -6,12 +6,10 @@ const ExpenseList = () => {
   const { expenses, deleteExpense, editExpense } = useContext(ExpenseContext);
 
   const handleEdit = (item) => {
-    // Humanized Note: Using basic Alert for mobile-only compatibility
     Alert.alert("Edit Feature", "To update this expense, please delete it and re-add with correct details.");
   };
 
   const confirmDelete = (id) => {
-    // Mobile-native Alert (from Lecture 6/7 concepts)
     Alert.alert(
       "Delete Expense",
       "Are you sure you want to remove this?",

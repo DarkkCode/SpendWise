@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   registerBtn: { 
     width: '100%',
-    backgroundColor: '#10b981', // Green for registration
+    backgroundColor: '#10b981',
     paddingVertical: 15, 
     borderRadius: 10,
     alignItems: 'center',
