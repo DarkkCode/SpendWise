@@ -35,7 +35,7 @@ export const ExpenseProvider = ({ children }) => {
       setExpenses(expenseData);
     });
 
-    // Fetches User-Specific Settings (Budget)
+    // Fetches Budget Settings
     const fetchUserSettings = async () => {
       const userDoc = await getDoc(doc(db, "users", user.uid));
       if (userDoc.exists()) {

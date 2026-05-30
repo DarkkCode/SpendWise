@@ -13,7 +13,7 @@ const LoginScreen = ({ navigation }) => {
       return;
     }
     try {
-      // This actually talks to the Cloud to verify the user
+      // Talks to the Cloud to verify the user
       await signInWithEmailAndPassword(auth, email, password);
       navigation.navigate('Main');
     } catch (error) {

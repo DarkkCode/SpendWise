@@ -14,7 +14,7 @@ const AddExpense = ({ navigation }) => {
     }
     const newEntry = {
       title,
-      amount: parseInt(amount), // Converts string to number
+      amount: parseInt(amount),
       cat: 'General',
       date: new Date().toLocaleDateString(),
     };

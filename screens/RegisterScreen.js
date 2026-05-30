@@ -17,7 +17,7 @@ const RegisterScreen = ({ navigation }) => {
       // Firebase function to create a new user
       await createUserWithEmailAndPassword(auth, email, password);
       Alert.alert("Success", "Account created successfully!");
-      navigation.navigate('Login'); // Go back to login after success
+      navigation.navigate('Login');
     } catch (error) {
       Alert.alert("Registration Failed", error.message);
     }
